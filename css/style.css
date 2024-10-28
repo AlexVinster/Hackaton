@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #f4f4f9;
     display: flex;
     flex-direction: column;
@@ -7,25 +7,99 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
-
+#main-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 45px;
+}
 h1 {
     margin-top: 0;
     font-size: 24px;
     color: #333;
 }
 
+h2 {
+    font-size: 40px;
+    color: #132a13;
+    text-transform: uppercase;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+/* Загальний стиль для кнопок */
 button {
-    padding: 0.5em;
-    border: none;
-    background-color: #6200ea;
+    background-color: #4f772d; /* Основний колір */
     color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px; /* Додаємо відступ для кнопок */
+    font-size: 16px;
+    transition: all 0.3s ease; /* Гладкий перехід */
+    outline: none;
+    position: relative;
+    overflow: hidden; /* Для хвилі */
+    text-transform: uppercase;
+    margin: 20px 10px;
+    font-weight: 400;
 }
 
+/* Ефект при наведенні: зміна кольору і масштабування */
 button:hover {
-    background-color: #3700b3;
+    background-color: #4f772d;
+    transform: scale(1.05); /* Невелике збільшення кнопки */
+}
+
+/* Ефект натискання: зменшення і тінь */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тінь під кнопкою */
+}
+
+/* Хвильовий ефект при натисканні */
+button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+button:active::after {
+    transform: translate(-50%, -50%) scale(1); /* Анімація хвилі */
+}
+
+/* Стиль окремих кнопок у тесті Роршаха */
+#rorschach-question-container button {
+    background-color: #31572c; /* Інший колір для варіантів Роршаха */
+    margin: 10px 0;
+    width: 100%;
+}
+
+#rorschach-question-container button:hover {
+    background-color: #4f772d;
+}
+
+#retry-button {
+    background-color: #4f772d;
+    color: white;
+    font-weight: bold;
+}
+
+#retry-button:hover {
+    background-color: #4f772d;
+}
+
+
+button:hover {
+    background-color: #4f772d;
     color: #fff;
 }
 
@@ -33,27 +107,31 @@ button:hover {
     display: block;
     padding: 0.5em;
     margin: 0.5em 0;
-    border: 1px solid #6200ea;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #fff;
-    color: #6200ea;
+    background-color: #4f772d;
+    color: #fff;
     text-align: center;
 }
 
 .option-button:hover {
-    background-color: #5125b6;
+    background-color: #ecf39e;
+    color: #132a13;
 }
 
 .selected {
-    background-color: #6200ea;
+    background-color: #90a955;
     color: #fff;
 }
 
 .glass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
     position: relative;
     width: 80%;
-    max-width: 500px;
+    max-width: 1300px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
@@ -69,7 +147,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, #ffffff, #87CEEB, #32CD32);
+    background: radial-gradient(circle, #ecf39e, #ff8fab, #4f772d);
     background-size: 200% 200%;
     animation: gradientAnimation 15s ease infinite;
     z-index: 0;
@@ -100,7 +178,7 @@ button:hover {
 }
 
 .image-option.selected img {
-    border-color: #ff5722; /* Колір обраного зображення */
+    border-color: #4f772d; /* Колір обраного зображення */
 }
 
 .survey-container {
@@ -123,4 +201,40 @@ button:hover {
     margin: 5px 0; /* Відстань між кнопками */
     padding: 10px 20px; /* Внутрішній відступ кнопок */
     cursor: pointer; /* Показує, що кнопка активна */
+}
+
+#recommendationText {
+    font-size: 20px;
+    padding: 0 50px;
+}
+
+
+
+.test-container {
+    border: 1px solid var(--separation);
+    border-radius: 16px;
+    height: 290px;
+    text-decoration: none;
+    overflow: hidden;
+    width: 300px;
+}
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+a {
+    text-decoration: underline;
+}
+a {
+    background-color: #0000;
+}
+
+.design {
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.103) ;
+
+}
+
+h6 {
+    font-size: 20px;
+    color: black;
 }
