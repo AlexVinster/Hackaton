@@ -102,3 +102,25 @@ button:hover {
 .image-option.selected img {
     border-color: #ff5722; /* Колір обраного зображення */
 }
+
+.survey-container {
+    display: flex;
+    flex-direction: column; /* Вирівнюємо елементи по вертикалі */
+    align-items: center; /* Вирівнюємо елементи по центру */
+}
+
+#rorschach-question-container {
+    display: flex;
+    flex-direction: column; /* Вирівнюємо елементи по вертикалі */
+    align-items: center; /* Вирівнюємо елементи по центру */
+}
+
+#rorschach-question-container img {
+    margin-bottom: 20px; /* Відстань між зображенням і кнопками */
+}
+
+#rorschach-question-container button {
+    margin: 5px 0; /* Відстань між кнопками */
+    padding: 10px 20px; /* Внутрішній відступ кнопок */
+    cursor: pointer; /* Показує, що кнопка активна */
+}
