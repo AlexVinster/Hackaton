@@ -15,7 +15,7 @@
             <div id="menu">
                 <button id="emotional-survey">Опитування для визначення емоційного стану</button>
                 <button id="beck-test">Тест Шкали Бека</button>
-                <button id="image-test">Тест з картинками</button> <!-- Новий тест -->
+                <button id="rorschach-test">Тест Роршаха</button> <!-- Кнопка для тесту Роршаха -->
             </div>
 
             <div id="survey" style="display: none;">
@@ -26,8 +26,13 @@
                 <div id="beck-question-container"></div>
             </div>
 
-            <div id="imageSurvey" style="display: none;">
-                <div id="image-question-container"></div> <!-- Контейнер для тесту з картинками -->
+            <div id="rorschachSurvey" style="display: none;">
+                <div id="rorschach-question-container"></div> <!-- Контейнер для тесту Роршаха -->
+            </div>
+
+            <div id="meaning" style="display: none;">
+                <h2>Ваше значення:</h2>
+                <p id="meaningText"></p>
             </div>
 
             <div id="recommendation" style="display: none;">
@@ -41,6 +46,7 @@
     <script src="js/emotionalSurvey.js"></script>
     <script src="js/beckTest.js"></script>
     <script src="js/imageTest.js"></script>
+    <script src="js/rorschachTest.js"></script> <!-- Додаємо скрипт тесту Роршаха -->
     <script src="js/retryButton.js"></script>
     <script src="https://cdn.pulse.is/livechat/loader.js" data-live-chat-id="671f6632dd8d4ff2e30df2dc" async></script>
 </body>
