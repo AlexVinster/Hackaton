@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моніторинг Емоційного Стану</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="glass">
+        <div id="app">
+            <h1 id="main-title">Головне меню</h1>
+            <div id="menu">
+                <button id="emotional-survey">Опитування для визначення емоційного стану</button>
+                <button id="beck-test">Тест Шкали Бека</button>
+                <button id="image-test">Тест з картинками</button> <!-- Новий тест -->
+            </div>
+
+            <div id="survey" style="display: none;">
+                <div id="question-container"></div>
+            </div>
+
+            <div id="beckSurvey" style="display: none;">
+                <div id="beck-question-container"></div>
+            </div>
+
+            <div id="imageSurvey" style="display: none;">
+                <div id="image-question-container"></div> <!-- Контейнер для тесту з картинками -->
+            </div>
+
+            <div id="recommendation" style="display: none;">
+                <h2>Рекомендація</h2>
+                <p id="recommendationText"></p>
+                <button id="retry-button">Пройти знову</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/emotionalSurvey.js"></script>
+    <script src="js/beckTest.js"></script>
+    <script src="js/imageTest.js"></script>
+    <script src="js/retryButton.js"></script>
+</body>
+</html>
